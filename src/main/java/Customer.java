@@ -5,8 +5,6 @@ public class Customer {
     public String CustomerId;
     public String  Address;
 
-    public String length
-
     public String getFirstName() {
         return firstName;
     }
@@ -44,7 +42,7 @@ public class Customer {
            setFirstName("Patrick");
             if (getFirstName()<3)
             {
-                throw new IllegalAccessException("First Name is too small")
+                throw new IllegalAccessException("First Name is too small");
             }
             else{
         return firstName;}
@@ -53,7 +51,7 @@ public class Customer {
             setLastName("Flanagan");;
         if (getLastName()<3)
         {
-            throw new IllegalAccessException("Last Name is too small")
+            throw new IllegalAccessException("Last Name is too small");
         }
         else{
         return lastName;}
@@ -63,9 +61,18 @@ public class Customer {
         setCustomerId("customerid");
         if (getCustomerId()<8 || getCustomerId()>12)
         {
-            throw new IllegalAccessException("Id must be between 8 to 12 charcters long")
+            throw new IllegalAccessException("Id must be between 8 to 12 charcters long");
         }
         else{
         return CustomerId;}
+    }
+    public String Address(){
+        setCustomerId("County Galway");
+        if (getAddress()<10 || getAddress()>42)
+        {
+            throw new IllegalAccessException("Address must be between 10 to 42 charcters long");
+        }
+        else{
+            return CustomerId;}
     }
 }

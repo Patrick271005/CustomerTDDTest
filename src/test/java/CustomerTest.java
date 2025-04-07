@@ -37,6 +37,15 @@ public class CustomerTest {
         Exception ex=assertThrows(IllegalArgumentException.class,() ->{new Customer()("c");})
     }
 
+    @Test
+    void testAddressSuccess()
+    {
+        assertEquals("County Galway",myCustomer.Address);
+    }
+    @Test
+    void testAddressFail(){
+        Exception ex=assertThrows(IllegalArgumentException.class,() ->{new Customer()("gal");})
+    }
 
 
 
