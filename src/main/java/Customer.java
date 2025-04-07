@@ -40,7 +40,7 @@ public class Customer {
     }
 
     public String firstName() {
-        String fname="Patrick"
+        String fname="Patrick";
             firstName="Patrick";
             if (firstName<3)
             {
@@ -51,7 +51,7 @@ public class Customer {
     }
     public String lastName() {
 
-        String fname="Flanagan"
+        String fname="Flanagan";
             lastName="Flanagan";
         if (lastName<3)
         {
