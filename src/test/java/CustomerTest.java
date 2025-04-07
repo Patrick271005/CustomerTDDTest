@@ -12,7 +12,7 @@ public class CustomerTest {
         myCustomer=new Customer();
             }
             @Test
-            void testFirstnameSucess(){
+            void testFirstnameSuccess(){
             assertEquals("Patrick",myCustomer.firstName());
             }
             @Test
@@ -20,13 +20,23 @@ public class CustomerTest {
                 Exception ex = assertThrows(IllegalArgumentException.class,()->{myCustomer.firstName("Patrick");)};
             }
     @Test
-    void testLastnameSucess(){
+    void testLastnameSuccess(){
         assertEquals("Flanagan",myCustomer.lastName());
     }
     @Test
     void testLastnameFail(){
         Exception ex = assertThrows(IllegalArgumentException.class,()->{myCustomer.firstName("Flanagan");)};
     }
+    @Test
+    void testCustomerIdSuccess(){
+        assertEquals("customerid",myCustomer.CustomerId);
+
+    }
+    @Test
+    void testCustomerIdFail(){
+        Exception ex=assertThrows(IllegalArgumentException.class,() ->{new Customer()("c");})
+    }
+
 
 
 
