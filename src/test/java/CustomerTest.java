@@ -17,8 +17,16 @@ public class CustomerTest {
             }
             @Test
             void testFirstnameFail(){
-                Exception ex = assertThrows(IllegalArgumentException.class)->{myCustomer.firstName()}
+                Exception ex = assertThrows(IllegalArgumentException.class,()->{myCustomer.firstName("Patrick");)};
             }
+    @Test
+    void testLastnameSucess(){
+        assertEquals("Flanagan",myCustomer.lastName());
+    }
+    @Test
+    void testLastnameFail(){
+        Exception ex = assertThrows(IllegalArgumentException.class,()->{myCustomer.firstName("Flanagan");)};
+    }
 
 
 
